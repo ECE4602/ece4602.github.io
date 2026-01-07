@@ -1,7 +1,7 @@
 # Site settings
-title: ECE4602 Deep Learning for Computer Vision
+title: ECE4602 Neural Networks
 email: cgokmen@stanford.edu
-description: "Course materials and notes for ECE4602: Deep Learning for Computer Vision."
+description: "Course materials and notes for ECE4602: Neural Networks."
 baseurl: ""
 url: "https://cs231n.github.io"
 courseurl: "http://cs231n.stanford.edu/"
