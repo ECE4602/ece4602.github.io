@@ -90,6 +90,11 @@ a:visited { color: var(--aast-navy-dark); }
 }
 
 /* Custom CSS for pages */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .figcenter {
   text-align: center;
 }
@@ -121,6 +126,62 @@ a:visited { color: var(--aast-navy-dark); }
 
 .post-content p {
   text-align: justify;
+}
+
+.post-content .text-center,
+.post-content .text-center p,
+.post-content .text-center li {
+  text-align: center;
+}
+
+.post-content .text-left,
+.post-content .text-left p,
+.post-content .text-left li {
+  text-align: left;
+}
+
+.post-content .text-right,
+.post-content .text-right p,
+.post-content .text-right li {
+  text-align: right;
+}
+
+.post-content .img-center {
+  display: block;
+  margin: 16px auto;
+}
+
+.post-content .img-85 { width: 85%; }
+.post-content .img-70 { width: 70%; }
+.post-content .img-50 { width: 50%; }
+.post-content .img-35 { width: 35%; }
+
+.post-content .panel {
+  background-color: var(--aast-surface);
+  border: 1px solid var(--aast-border);
+  border-radius: 4px;
+  padding: 16px 20px;
+}
+
+.post-content .panel.navy {
+  background-color: var(--aast-navy);
+  border-color: var(--aast-navy-dark);
+  color: #fff;
+}
+
+.post-content .panel.gold {
+  background-color: #fff4d6;
+  border-color: var(--aast-gold);
+}
+
+.post-content .two-col {
+  column-count: 2;
+  column-gap: 24px;
+}
+
+.post-content .center-block {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .kw {
@@ -471,4 +532,15 @@ a:visited { color: var(--aast-navy-dark); }
     width: auto;
     margin: 0 0 15px; }
 
+}
+
+@media screen and (max-width: 700px) {
+  .post-content .two-col {
+    column-count: 1;
+  }
+}
+
+var {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
 }
