@@ -35,12 +35,17 @@ Scalars are typically denoted by **lowercase letters**, such as \\(x\\), \\(y\\)
 The set of all real-valued scalars is denoted by the **real numbers**, written as \\(R \\).
 If \\(x \\) is a real number, we write: \\(x \in R \\).
 
+Sometimes, scalars are restricted to a specific set. For example, \\(x \in \\{0,1\\}\\) means \\(x\\) is a **binary scalar** (it can only take the values 0 or 1).
+
 
 
 
 <div class='fig figcenter fighighlight'>
-  <img src='/assets/module-0/scalar.gif' alt='Scalar illustrated as a single point on a number line' class='img-center' style='max-width: 360px;' onerror="this.onerror=null;this.src='/assets/module-0/scalar.png';">
-  <div class='figcaption'>Scalar (example): a single value on a number line.</div>
+  <div class='img-row'>
+    <img src='/assets/module-0/scalar.gif' alt='Scalar illustrated as a single point on a number line' class='img-center' style='max-width: 360px;' onerror="this.onerror=null;this.src='/assets/module-0/scalar.png';">
+    <img src='/assets/module-0/scalar-binary.png' alt='Binary scalar example: x in {0,1}' class='img-center' style='max-width: 360px;' onerror="this.onerror=null;this.src='/assets/placeholders/placeholder.svg';">
+  </div>
+  <div class='figcaption'>Scalar (examples): a real-valued scalar and a binary scalar.</div>
 </div>
 
 ### Vectors

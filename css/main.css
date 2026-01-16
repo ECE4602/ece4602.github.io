@@ -156,6 +156,19 @@ a:visited { color: var(--aast-navy-dark); }
 .post-content .img-50 { width: 50%; }
 .post-content .img-35 { width: 35%; }
 
+.post-content .img-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.post-content .img-row img {
+  max-width: 48%;
+  height: auto;
+}
+
 .post-content .panel {
   background-color: var(--aast-surface);
   border: 1px solid var(--aast-border);
@@ -537,6 +550,10 @@ a:visited { color: var(--aast-navy-dark); }
 @media screen and (max-width: 700px) {
   .post-content .two-col {
     column-count: 1;
+  }
+
+  .post-content .img-row img {
+    max-width: 100%;
   }
 }
 
