@@ -49,7 +49,68 @@ Sometimes, scalars are restricted to a specific set. For example, \\(x \in \\{0,
 </div>
 
 ### Vectors
-Write your explanation here.
+A **vector** is a first-order tensor: a single ordered list of values. A vector lives in \\(R^n\\), where \\(n\\) is its **dimensionality** (the number of components). For example, \\(R^2\\) is the 2D Euclidean space, while \\(R^n\\) generalizes this idea to higher dimensions. By convention, vectors are often written as bold lowercase letters (e.g., \\(\\mathbf{v}\\)) to distinguish them from scalars.
+
+#### Practical interpretation
+In data science and machine learning, vectors often represent structured data. For example, a house can be described by a feature vector
+
+\\[
+\\mathbf{v} = [\\text{space},\\ \\text{price},\\ \\text{number of rooms}]
+\\]
+
+This representation makes it easy to apply the same mathematical operations (scaling, comparison, optimization) to real-world attributes.
+
+#### Vector instantiation in PyTorch
+In PyTorch, vectors are **one-dimensional tensors**. For example, a vector \\(\\mathbf{v} \\in R^3\\):
+
+```python
+import torch
+
+v = torch.tensor([120.0, 300000.0, 3.0])  # space, price, rooms
+```
+
+#### Vector length (dimensionality)
+The dimensionality is the number of elements:
+
+```python
+n = v.shape[0]
+# or
+n = len(v)
+```
+
+Both return \\(n = 3\\), confirming \\(\\mathbf{v} \\in R^3\\).
+
+#### Scalar-vector multiplication
+Multiplying a vector by a scalar \\(\\alpha \\in R\\) scales every component:
+
+```python
+alpha = 0.5
+scaled_v = alpha * v
+```
+
+Mathematically:
+
+\\[
+\\alpha\\mathbf{v} = [\\alpha v_1,\\ \\alpha v_2,\\ \\ldots,\\ \\alpha v_n]
+\\]
+
+#### Vector-vector operations
+Given another vector \\(\\mathbf{u} \\in R^3\\):
+
+```python
+u = torch.tensor([100.0, 250000.0, 2.0])
+
+dot_product = torch.dot(v, u)
+elementwise_product = v * u
+```
+
+The **dot product** produces a scalar (often used as a similarity measure):
+
+\\[
+\\mathbf{v} \\cdot \\mathbf{u} = \\sum_{i=1}^{n} v_i u_i
+\\]
+
+The **elementwise (Hadamard) product** produces another vector in \\(R^n\\).
 
 ### Matrices
 Write your explanation here.
