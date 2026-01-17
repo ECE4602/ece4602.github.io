@@ -26,19 +26,10 @@ Table of Contents:
 ### Scalars
 
 
-A **scalar** is a single real number, such as 2, 6, or 20. Scalars are **0<sup>th</sup>-order quantities**, meaning they have **magnitude only** (no direction).
+Scalars are the simplest mathematical objects and can be viewed as **0th-order tensors**, meaning they have **no axes** (no dimensions). A scalar is an element of \\(R\\) (the set of real numbers) and is typically denoted by a lowercase letter such as \\(x\\) or \\(a\\). Unlike vectors or matrices, scalars represent a single numerical value.
 
-Geometrically, a scalar can be represented as a **point on a number line**, or as a coordinate along a single axis (e.g., the *x*- or *y*-axis) in a higher-dimensional Euclidean space.
-
-Scalars are typically denoted by **lowercase letters**, such as \\(x\\), \\(y\\), or \\(z\\).
-
-The set of all real-valued scalars is denoted by the **real numbers**, written as \\(R \\).
-If \\(x \\) is a real number, we write: \\(x \in R \\).
-
-Sometimes, scalars are restricted to a specific set. For example, \\(x \in \\{0,1\\}\\) means \\(x\\) is a **binary scalar** (it can only take the values 0 or 1).
-
-
-
+#### Scalars in Euclidean space
+Geometrically, a scalar lies in one-dimensional Euclidean space and can be visualized as a point on a number line. When embedded in \\(R^2\\), a scalar may be represented along a single axis (such as the \\(x\\)-axis or \\(y\\)-axis) while having no extent along the other axis. In both cases, the scalar still represents only one degree of freedom.
 
 <div class='fig figcenter fighighlight'>
   <div class='img-row'>
@@ -47,6 +38,14 @@ Sometimes, scalars are restricted to a specific set. For example, \\(x \in \\{0,
   </div>
   <div class='figcaption'>Scalar (examples): a real-valued scalar and a binary scalar.</div>
 </div>
+
+#### Discrete and continuous scalars
+Scalars can take continuous values, such as \\(x \\in R\\), or discrete values. For example, a binary scalar may be defined as \\(x \\in \\{0,1\\}\\), which is commonly used to represent logical states, class labels, or on/off conditions in machine learning and computer science.
+
+#### Scalars in practice
+In practical applications, scalars represent individual quantities such as price, temperature, weight, or a binary decision variable. They also serve as coefficients that scale vectors and matrices, making them foundational to linear algebra, geometry, and numerical computation.
+
+
 
 ### Vectors
 A **vector** is a first-order tensor: a single ordered list of values. A vector lives in \\(R^n\\), where \\(n\\) is its **dimensionality** (the number of components). For example, \\(R^2\\) is the 2D Euclidean space, while \\(R^n\\) generalizes this idea to higher dimensions. By convention, vectors are often written as bold lowercase letters (e.g., \\(\\mathbf{v}\\)) to distinguish them from scalars.
