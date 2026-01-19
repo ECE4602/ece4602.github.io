@@ -24,11 +24,8 @@ Scalars are the simplest mathematical objects and can be viewed as **0th-order t
 Geometrically, a scalar lies in one-dimensional Euclidean space and can be visualized as a point on a number line. When embedded in \\(R^2\\), a scalar may be represented along a single axis (such as the \\(x\\)-axis or \\(y\\)-axis) while having no extent along the other axis. In both cases, the scalar still represents only one degree of freedom.
 
 <div class='fig figcenter fighighlight'>
-  <div class='img-row'>
-    <img src='/assets/module-0/scalar.gif' alt='Scalar illustrated as a single point on a number line' class='img-center' style='max-width: 360px;' onerror="this.onerror=null;this.src='/assets/module-0/scalar.png';">
-    <img src='/assets/module-0/scalar-binary.png' alt='Binary scalar example: x in {0,1}' class='img-center' style='max-width: 360px;' onerror="this.onerror=null;this.src='/assets/placeholders/placeholder.svg';">
-  </div>
-  <div class='figcaption'>Scalar (examples): a real-valued scalar and a binary scalar.</div>
+  <img src='/assets/module-0/scalar.gif' alt='Scalar example embedded in R^2, shown along a single axis' class='img-center' style='max-width: 520px;' onerror="this.onerror=null;this.src='/assets/module-0/scalar.png';">
+  <div class='figcaption'>Scalar example in 2D space (R^2): one value with one degree of freedom.</div>
 </div>
 
 #### Discrete and continuous scalars
