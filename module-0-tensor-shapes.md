@@ -25,7 +25,7 @@ Geometrically, a scalar lies in one-dimensional Euclidean space and can be visua
 
 <div class='fig figcenter fighighlight'>
   <img src='/assets/module-0/scalar.gif' alt='Two scalar examples embedded in R^2, each shown along a single axis' class='img-center' style='max-width: 520px;' onerror="this.onerror=null;this.src='/assets/module-0/scalar.png';">
-  <div class='figcaption'>Two scalar examples embedded in \\(R^2\\): each scalar has one degree of freedom and can be placed along a single axis.</div>
+  <div class='figcaption'>Two scalar examples embedded in \(R^2\): each scalar has one degree of freedom and can be placed along a single axis.</div>
 </div>
 
 #### Discrete and continuous scalars
