@@ -124,6 +124,15 @@ a:visited { color: var(--aast-navy-dark); }
   text-align: justify;
 }
 
+.post-content .resource-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 .post-content p {
   text-align: justify;
 }

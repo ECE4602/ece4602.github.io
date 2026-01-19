@@ -13,6 +13,7 @@ Table of Contents:
   - [Vectors](#vectors)
   - [Matrices](#matrices)
   - [Tensors](#tensors)
+- [Extra resources](#extra-resources)
 
 ## Core data objects and notation
 ### Scalars
@@ -228,3 +229,6 @@ Understanding axis meaning is crucial for working correctly with tensor operatio
 Tensors make it possible to work with large, structured datasets efficiently. They allow operations to be applied over entire collections of data at once and serve as the common data structure for numerical computation frameworks.
 
 Example: a batch of 100 images can be processed simultaneously because they are stored as a single tensor rather than 100 separate images.
+
+## Extra resources
+- <img src="/assets/logos/nasa-logo.png" alt="NASA logo" class="resource-logo"> <a href="https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf" target="_blank" rel="noopener noreferrer">An Introduction to Tensors for Students of Physics and Engineering - Nasa</a>
