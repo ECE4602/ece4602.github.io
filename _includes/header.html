@@ -1,8 +1,8 @@
 <header class="site-header">
 
-  <a class="site-title" href="{{ site.url }}">{{ site.title }}</a>
-  {% unless page.url == "/" %}
-  <a class="site-link" href="{{ site.courseurl }}">Course Website</a>
-  {% endunless %}
+  <div class="site-header-inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="site-link" href="{{ site.baseurl }}/Stanford%20University%20CS231n_%20Deep%20Learning%20for%20Computer%20Vision.html">Course Website</a>
+  </div>
 
 </header>
