@@ -131,6 +131,7 @@ a:visited { color: var(--aast-navy-dark); }
   object-fit: cover;
   vertical-align: middle;
   margin-left: auto;
+  transform: translateY(2px);
 }
 
 .post-content .resource-link {
