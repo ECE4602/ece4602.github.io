@@ -5,8 +5,7 @@ description: "Course materials and notes for ECE4602: Neural Networks."
 baseurl: ""
 url: "https://cs231n.github.io"
 courseurl: "http://cs231n.stanford.edu/"
-twitter_username: cs231n
-github_username: cs231n
+github_username: ECE4602
 
 # Build settings
 markdown: kramdown
