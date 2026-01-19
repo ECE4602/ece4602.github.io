@@ -4,7 +4,7 @@ title: "Module 0: Tensor Shapes & Linear Algebra Refresher"
 permalink: /module-0-tensor-shapes/
 ---
 
-Module 0 is short, practical onboarding: read shapes, predict tensor dimensions, and debug shape errors with confidence. This page is code-first with brief explanations and simple image placeholders you can replace later.
+Module 0 introduces the tensor view of data used throughout ECE4602. It reviews scalars, vectors, matrices, and higher-order tensors, focusing on order/shape, axis meaning, and simple PyTorch examples so you can read and reason about dimensions with confidence.
 
 Table of Contents:
 
