@@ -231,4 +231,4 @@ Tensors make it possible to work with large, structured datasets efficiently. Th
 Example: a batch of 100 images can be processed simultaneously because they are stored as a single tensor rather than 100 separate images.
 
 ## Extra resources
-- <a class="resource-link" href="https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf" target="_blank" rel="noopener noreferrer"><img src="/assets/logos/nasa-logo.png" alt="NASA logo" class="resource-logo" width="22" height="22">An Introduction to Tensors for Students of Physics and Engineering - Nasa</a>
+- <a class="resource-link" href="https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf" target="_blank" rel="noopener noreferrer"><span class="resource-title">An Introduction to Tensors for Students of Physics and Engineering - Nasa</span><img src="/assets/logos/nasa-logo.png" alt="NASA logo" class="resource-logo" width="22" height="22"></a>
