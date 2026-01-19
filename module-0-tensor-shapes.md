@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Module 0: Tensor Shapes & Linear Algebra Refresher"
-permalink: /python-numpy-tutorial/
+permalink: /module-0-tensor-shapes/
 ---
 
 Module 0 is short, practical onboarding: read shapes, predict tensor dimensions, and debug shape errors with confidence. This page is code-first with brief explanations and simple image placeholders you can replace later.
