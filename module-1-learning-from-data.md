@@ -1,7 +1,7 @@
 ---
 layout: page
 mathjax: true
-permalink: /classification/
+permalink: /linear-regression/
 title: "Module 1: Learning From Data (Celsius \u2192 Fahrenheit)"
 ---
 
