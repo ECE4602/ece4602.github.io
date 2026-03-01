@@ -1,7 +1,7 @@
 ---
 layout: page
 mathjax: true
-permalink: /module-1-torch-basics/
+permalink: /module-0-torch-basics/
 title: "Module 1: PyTorch Tensors and Data Representation"
 ---
 
@@ -9,9 +9,11 @@ title: "Module 1: PyTorch Tensors and Data Representation"
 
 This module is a PyTorch-based walkthrough of the ideas presented in Jay Alammar's excellent [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/). Instead of NumPy arrays, we use **PyTorch tensors** (`torch.Tensor`) — the core data structure you will use throughout all deep learning work in this course.
 
-![Intro](/assets/module-0/Gemini_Generated_Image_hhcw5bhhcw5bhhcw.png)
-
-> **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ece4602/ece4602.github.io/blob/master/1_Torch_Basics.ipynb)
+<div style="margin: 1.5em 0;">
+  <a href="https://colab.research.google.com/github/ece4602/ece4602.github.io/blob/master/1_Torch_Basics.ipynb" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+</div>
 
 ---
 
@@ -168,7 +170,7 @@ data     = torch.tensor([[1., 2.],
                          [3., 4.]])
 ones_row = torch.tensor([10., 20.])
 
-data * ones_row          # broadcast: each row is multiplied element-wise
+data + ones_row          # broadcast: each row is added element-wise
 ```
 
 ![Broadcasting a row vector across a 2D matrix](https://jalammar.github.io/images/numpy/numpy-matrix-broadcast.png)
@@ -203,7 +205,7 @@ data.max(dim=0)      # max along rows  → one value per column
 data.max(dim=1)      # max along cols  → one value per row
 ```
 
-![Matrix aggregation along rows and columns](https://jalammar.github.io/images/numpy/numpy-matrix-aggregation-4.png)
+![Matrix aggregation along rows and columns](/assets/module-0/data_aggregation.png)
 
 ---
 
@@ -214,22 +216,27 @@ data.max(dim=1)      # max along cols  → one value per row
 Swap rows and columns with `.T`:
 
 ```python
-mat = torch.tensor([[1., 2., 3.],
-                    [4., 5., 6.]])
-mat.T     # shape changes from (2, 3) → (3, 2)
+data = torch.tensor([[1., 4.],
+                     [2., 5.],
+                     [3., 6.]])
+data.T     # shape changes from (3, 2) → (2, 3)
 ```
 
 ![Transposing a matrix](https://jalammar.github.io/images/numpy/numpy-transpose.png)
 
 ### Reshape
 
-`reshape()` re-interprets the same data in a new shape. Use `-1` to let PyTorch infer one dimension automatically:
+`reshape()` re-interprets the same data in a new shape. You can chain multiple reshapes to progressively change the tensor's dimensions:
 
 ```python
-x  = torch.arange(12)       # tensor([0, 1, ..., 11])
+data = torch.arange(start=1, end=7).reshape(6, 1)  # tensor([1, 2, 3, 4, 5, 6]) as a column
+data, data.shape
 
-x2 = x.reshape(3, 4)        # explicit shape
-x3 = x.reshape(3, -1)       # PyTorch infers the second dim → (3, 4)
+data = data.reshape(2, 3)   # reshape to 2 rows × 3 cols
+data, data.shape
+
+data = data.reshape(3, 2)   # reshape to 3 rows × 2 cols
+data, data.shape
 ```
 
 ![Reshaping a tensor](https://jalammar.github.io/images/numpy/numpy-reshape.png)
