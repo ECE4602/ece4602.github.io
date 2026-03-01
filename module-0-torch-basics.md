@@ -269,18 +269,67 @@ tensor_c = torch.randn((2, 4, 3))
 
 ## 8. NumPy ↔ PyTorch Cheat Sheet
 
-| NumPy | PyTorch | Notes |
-|---|---|---|
-| `np.array(...)` | `torch.tensor(...)` | |
-| `np.ones(shape)` | `torch.ones(shape)` | |
-| `np.zeros(shape)` | `torch.zeros(shape)` | |
-| `np.random.random(shape)` | `torch.rand(shape)` | uniform `[0,1)` |
-| `a + b`, `a * b`, ... | same | element-wise |
-| `a @ b` | `a @ b` or `torch.matmul(a, b)` | matrix multiply |
-| `x.T` | `x.T` (2D) / `x.permute(...)` (nD) | transpose |
-| `x.reshape(...)` | `x.reshape(...)` or `x.view(...)` | view requires contiguous memory |
-| `x.sum(axis=...)` | `x.sum(dim=...)` | aggregation along a dimension |
-| `x.mean(axis=...)` | `x.mean(dim=...)` | |
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;margin:1.5em 0;">
+  <thead>
+    <tr style="background:#4a4e69;color:#fff;">
+      <th style="padding:10px 16px;text-align:left;border:none;">NumPy</th>
+      <th style="padding:10px 16px;text-align:left;border:none;">PyTorch</th>
+      <th style="padding:10px 16px;text-align:left;border:none;">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f8f8fc;">
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>np.array(...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>torch.tensor(...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"></td>
+    </tr>
+    <tr>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>np.ones(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>torch.ones(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"></td>
+    </tr>
+    <tr style="background:#f8f8fc;">
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>np.zeros(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>torch.zeros(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"></td>
+    </tr>
+    <tr>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>np.random.random(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>torch.rand(shape)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">uniform <code>[0,1)</code></td>
+    </tr>
+    <tr style="background:#f8f8fc;">
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>a + b</code>, <code>a * b</code>, …</td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">same</td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">element-wise</td>
+    </tr>
+    <tr>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>a @ b</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>a @ b</code> or <code>torch.matmul(a, b)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">matrix multiply</td>
+    </tr>
+    <tr style="background:#f8f8fc;">
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.T</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.T</code> (2D) / <code>x.permute(...)</code> (nD)</td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">transpose</td>
+    </tr>
+    <tr>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.reshape(...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.reshape(...)</code> or <code>x.view(...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>view</code> requires contiguous memory</td>
+    </tr>
+    <tr style="background:#f8f8fc;">
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.sum(axis=...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;"><code>x.sum(dim=...)</code></td>
+      <td style="padding:9px 16px;border-bottom:1px solid #e0e0e0;">aggregation along a dimension</td>
+    </tr>
+    <tr>
+      <td style="padding:9px 16px;"><code>x.mean(axis=...)</code></td>
+      <td style="padding:9px 16px;"><code>x.mean(dim=...)</code></td>
+      <td style="padding:9px 16px;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
