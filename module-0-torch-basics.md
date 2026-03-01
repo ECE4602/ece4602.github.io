@@ -9,6 +9,8 @@ title: "Module 1: PyTorch Tensors and Data Representation"
 
 This module is a PyTorch-based walkthrough of the ideas presented in Jay Alammar's excellent [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/). Instead of NumPy arrays, we use **PyTorch tensors** (`torch.Tensor`) — the core data structure you will use throughout all deep learning work in this course.
 
+<https://jalammar.github.io/visual-numpy/>
+
 <div style="margin: 1.5em 0;">
   <a href="https://colab.research.google.com/github/ece4602/ece4602.github.io/blob/master/1_Torch_Basics.ipynb" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
