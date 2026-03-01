@@ -9,7 +9,7 @@ title: "Module 0: PyTorch Tensors and Data Representation"
 
 This module is a PyTorch-based walkthrough of the ideas presented in Jay Alammar's excellent [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/). Instead of NumPy arrays, we use **PyTorch tensors** (`torch.Tensor`) — the core data structure you will use throughout all deep learning work in this course.
 
-> **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ece4602/ece4602.github.io/blob/master/1_Torch_Basics.ipynb)
+<a href="https://colab.research.google.com/github/ece4602/ece4602.github.io/blob/master/1_Torch_Basics.ipynb" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#f9ab00;color:#1a1a1a;font-weight:600;font-size:0.8rem;padding:6px 14px;border-radius:6px;text-decoration:none;letter-spacing:0.01em;"><img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="" style="width:16px;height:16px;margin:0;">Open in Colab</a>
 
 ---
 
@@ -166,7 +166,7 @@ data     = torch.tensor([[1., 2.],
                          [3., 4.]])
 ones_row = torch.tensor([10., 20.])
 
-data * ones_row          # broadcast: each row is multiplied element-wise
+data + ones_row          # broadcast: each row is added element-wise
 ```
 
 ![Broadcasting a row vector across a 2D matrix](https://jalammar.github.io/images/numpy/numpy-matrix-broadcast.png)
@@ -260,18 +260,33 @@ tensor_c = torch.randn((2, 4, 3))
 
 ## 8. NumPy ↔ PyTorch Cheat Sheet
 
-| NumPy | PyTorch | Notes |
-|---|---|---|
-| `np.array(...)` | `torch.tensor(...)` | |
-| `np.ones(shape)` | `torch.ones(shape)` | |
-| `np.zeros(shape)` | `torch.zeros(shape)` | |
-| `np.random.random(shape)` | `torch.rand(shape)` | uniform `[0,1)` |
-| `a + b`, `a * b`, ... | same | element-wise |
-| `a @ b` | `a @ b` or `torch.matmul(a, b)` | matrix multiply |
-| `x.T` | `x.T` (2D) / `x.permute(...)` (nD) | transpose |
-| `x.reshape(...)` | `x.reshape(...)` or `x.view(...)` | view requires contiguous memory |
-| `x.sum(axis=...)` | `x.sum(dim=...)` | aggregation along a dimension |
-| `x.mean(axis=...)` | `x.mean(dim=...)` | |
+<style>
+.cheat-table { width:100%; border-collapse:collapse; font-size:0.88rem; margin:16px 0; }
+.cheat-table thead tr { background: var(--aast-navy, #132b61); color:#fff; }
+.cheat-table thead th { padding:10px 14px; text-align:left; font-weight:600; letter-spacing:0.03em; }
+.cheat-table tbody tr:nth-child(odd)  { background:#f7f9fc; }
+.cheat-table tbody tr:nth-child(even) { background:#fff; }
+.cheat-table tbody tr:hover { background:#eef2ff; }
+.cheat-table td { padding:8px 14px; border-bottom:1px solid #e5e9f0; vertical-align:middle; }
+.cheat-table td:last-child { color:#6b7280; font-style:italic; }
+.cheat-table code { background:#eef0f8; border-radius:4px; padding:1px 5px; font-size:0.85em; }
+</style>
+
+<table class="cheat-table">
+  <thead><tr><th>NumPy</th><th>PyTorch</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><code>np.array(...)</code></td><td><code>torch.tensor(...)</code></td><td></td></tr>
+    <tr><td><code>np.ones(shape)</code></td><td><code>torch.ones(shape)</code></td><td></td></tr>
+    <tr><td><code>np.zeros(shape)</code></td><td><code>torch.zeros(shape)</code></td><td></td></tr>
+    <tr><td><code>np.random.random(shape)</code></td><td><code>torch.rand(shape)</code></td><td>uniform [0, 1)</td></tr>
+    <tr><td><code>a + b</code>, <code>a * b</code>, …</td><td>same</td><td>element-wise</td></tr>
+    <tr><td><code>a @ b</code></td><td><code>a @ b</code> or <code>torch.matmul(a, b)</code></td><td>matrix multiply</td></tr>
+    <tr><td><code>x.T</code></td><td><code>x.T</code> (2D) / <code>x.permute(...)</code> (nD)</td><td>transpose</td></tr>
+    <tr><td><code>x.reshape(...)</code></td><td><code>x.reshape(...)</code> or <code>x.view(...)</code></td><td>view requires contiguous memory</td></tr>
+    <tr><td><code>x.sum(axis=...)</code></td><td><code>x.sum(dim=...)</code></td><td>aggregation along a dimension</td></tr>
+    <tr><td><code>x.mean(axis=...)</code></td><td><code>x.mean(dim=...)</code></td><td></td></tr>
+  </tbody>
+</table>
 
 ---
 
